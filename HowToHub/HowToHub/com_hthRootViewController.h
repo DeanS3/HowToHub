@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface com_hthRootViewController : UIViewController <UIPageViewControllerDelegate>
+- (IBAction)ytTouch:(id)sender;
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 

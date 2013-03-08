@@ -106,4 +106,6 @@
     return UIPageViewControllerSpineLocationMid;
 }
 
+- (IBAction)ytTouch:(id)sender {
+}
 @end

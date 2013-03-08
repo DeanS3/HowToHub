@@ -480,6 +480,7 @@
 				1C0884D616E93D8D00E6F847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C0884D716E93D8D00E6F847 /* Build configuration list for PBXNativeTarget "HowToHubTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +489,7 @@
 				1C0884D916E93D8D00E6F847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
