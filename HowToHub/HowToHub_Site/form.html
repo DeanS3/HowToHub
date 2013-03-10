@@ -20,57 +20,41 @@
 			}
 			footer h5{color: black;}
 			h6{color: black;}
-			#vidList{background: red; background-size: 50px; float: right; position: relative; width: 200px; height: 200px; overflow: auto; margin-top: 100px;}
-			#user h1{background-color: white; color:orange; position: relative;  /*height: 400px;*/ overflow: auto; border-radius: 5px; text-align: center;}
-			#hthBg{background-color: gold; width: 976px; height: 220px; background-size: 100%;}
 			.page-header small{color: navy;}
-			.span10{background-color: black}
-			#pics img{height: 250px; width: 250px; margin-left: 45px; margin-bottom: 5px;}
+			#hthBg{background-color: gold; width: 976px; height: 220px; background-size: 100%;}
 			#foot{display: inline; }
 			#foot a{margin-left: 125px;}
+			textarea{width: 976px;}
+			.form-actions{width: 976px; background-color: gold;}
+			form{margin-left: 10px; margin-right: 10px;}
 
 		</style>
 	</head>
 		<body>
-			<!-- <header> -->
-				 <div class="page-header" class="row-fluid">
+			<header>
+				<div class="page-header" class="row-fluid">
 			    	<h1 id="hthBg"><img src="images/header.png" alt="How To Hug Logo." title="Welcome to How To Hub!">
 				    	</br>
 				    	<small>Project Showcase</small>
 			    	</h1>
-			    </div>	   
-			<!-- </header> -->
-			<nav>	
-			</nav>
-			<div class="container-fluid">
-			    <div class="row-fluid">
-				    <div class="span2">
-				    <!--Sidebar content-->
-				    <div id="vidList">
-						<ul>Related YouTube Videos</ul>
-						<ul>Related YouTube Videos</ul>
-						<ul>Related YouTube Videos</ul>
-					</div>
-				    </div>
-				    <div class="span10">
-				    <!--Body content-->
-					    <div id="user">
-							<h1>YouTube User Name</h1>
-							<h2>Name</h2>
-							<p>List of projects:</p>
-								<ul>project 1</ul>
-								<ul>project 2</ul>
-								<ul>project 3</ul>
-								<ul>project 4</ul>
-						</div>
-						<div id="pics">
-							<img src="..." class="img-polaroid">
-							<img src="..." class="img-polaroid">
-							<img src="..." class="img-polaroid">
-						</div>
-				    </div>
-				</div>
-		    </div>
+			    </div>		 
+			</header>
+			<div class="row-fluid"> 
+			    <form>
+				    <fieldset>
+				    <legend>Describe Your Accomplishments</legend>
+				    <label>Name</label>
+				    <input type="text" placeholder="Your Name">
+				    <span class="help-block">List Your Projects.</span>
+				    <textarea rows="10" ></textarea>
+				        <div class="form-actions">
+						    <button type="submit" class="btn btn-primary">Save changes</button>
+						    <button type="button" class="btn">Cancel</button>
+					    </div>
+				    </fieldset>
+			    </form>
+			</div>   
+			
 			<footer>
 				<h5>Welcome To The HTH Community!</h5>
 				<div class="row-fluid" id="foot">
