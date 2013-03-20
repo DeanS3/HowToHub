@@ -50,7 +50,8 @@
 						    <h5>Press Button Below To Continue.</h5>
 						    <ul class="nav nav-pills">
 								<li class="active">
-								<a href="https://accounts.google.com/o/oauth2/auth?client_id=1048828436085.apps.googleusercontent.com&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=https://gdata.youtube.com&response_type=code&access_type=offline">Log-In</a>
+								<a href="https://accounts.google.com/o/oauth2/auth?client_id=1048828436085.apps.googleusercontent.com&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=https://gdata.youtube.com&response_type=code&access_type=offline">Log-In
+								</a>
 								</li>
 							</ul>
 					    </div>
@@ -59,14 +60,21 @@
 
 					</ul>
 				</div>
+				<form class="well" class="row-fluid" action="https://accounts.google.com/o/oauth2/token&code=4/eYE0fVwwzwJo2twBg4kvFwkzTf6o.0q2cekhix3MXshQV0ieZDAo8j1T_egI&client_id=1048828436085.apps.googleusercontent.com&client_secret=L9ptxKkcDF72exFZTxYal_RR&redirect_uri=http://localhost/oauth2callback.html&grant_type=authorization_code">
+				  <label>Submit Authorization Code</label>
+				  <input type="text" class="span3" placeholder="Paste Code">
+				  <button type="submit" class="btn">Submit</button>
+				</form>
 
 			<footer>
 				<h5>Welcome To The HTH Community!</h5>
 				<h6>Copyright: Dean L. Stallworth III - March 2013</h6>
 			</footer>
 		<!-- JQUERY -->
-		 <script src="http://code.jquery.com/jquery.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/hth.js"></script>
 		</body>
 	
 </html>
