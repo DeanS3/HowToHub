@@ -20,53 +20,58 @@
 			}
 			footer h5{color: black;}
 			h6{color: black;}
-			.page-header small{color: navy;}
-			.page-header{margin-left: 10px;}
+			#vidList{background: red; background-size: 50px; float: right; position: relative; width: 200px; height: 200px; overflow: auto; margin-top: 100px;}
+			#user h1{background-color: white; color:orange; position: relative;  /*height: 400px;*/ overflow: auto; border-radius: 5px; text-align: center;}
 			#hthBg{background-color: gold; width: 976px; height: 220px; background-size: 100%;}
+			.page-header small{color: navy;}
+			.page-header{margin-left: 15px;}
+			.span10{background-color: black}
+			#pics img{height: 250px; width: 250px; margin-left: 45px; margin-bottom: 5px;}
 			#foot{display: inline; }
 			#foot a{margin-left: 125px; color: white;}
-			textarea{width: 976px;}
-			.form-actions{width: 976px; background-color: gold;}
-			form{margin-left: 10px; margin-right: 10px; }
-
+			#foot h6{margin-left: 450px;}
+			#exit{float: right; margin-bottom: 50px;}
+			footer{margin-top: 25px;}
+			#body{background-color: white; padding: 10px; width: 500px;}
+			#body p{background-color: gold; padding:10px;}
 		</style>
 	</head>
 		<body>
-			<header>
-				<div class="page-header" class="row-fluid">
-			    	<h1 id="hthBg"><img src="images/header.png" alt="How To Hug Logo." title="Welcome to How To Hub!">
+				 <div class="page-header" class="row-fluid">
+			    	<h1 id="hthBg"><img src="images/header.png" alt="How To Hub Logo." title="Welcome to How To Hub!">
 				    	</br>
 				    	<small>Project Showcase</small>
 			    	</h1>
-			    </div>		 
-			</header>
-			<div class="row-fluid"> 
-			    <form>
-				    <fieldset>
-				    <legend>Describe Your Accomplishments</legend>
-				    <label>Name</label>
-				    <input type="text" placeholder="Your Name">
-				    <span class="help-block">List Your Projects.</span>
-				    <textarea rows="10" ></textarea>
-				        <div class="form-actions">
-						    <button type="submit" class="btn btn-primary">Save changes</button>
-						    <button type="button" class="btn">Cancel</button>
-					    </div>
-				    </fieldset>
-			    </form>
-			</div>   
-			
+			    </div>	
+			    <nav>
+				    <div class="span3 offset1" id='exit'>
+				    	<a href="index.html" class="btn btn-large btn-primary" >Return Home</a>
+				    </div> 
+				</nav>
+
+					<div class='container' id='body'>
+				    	<h1>Your DIY Hub!</h1>
+				    	<p>Make friends, admire other DIYers works, and direct them to your own accomplishments.</p>
+				    	<h1>Showcase Your Accomplishments!</h1>
+				    	<p>How To Hub is a place to showcase your projects on your page with videos and descriptions of your works.</p>
+				    	<h1>Find More Challenges!</h1>
+				    	<p>Search the site and see what new ways you can challenge yourself.</p>
+				    </div> 
+			  
+		
 			<footer>
-				<h5>Welcome To The HTH Community!</h5>
+				
 				<div class="row-fluid" id="foot">
+					
 					<small><a href="#">Copyright Info</a></small>
 					<small><a href="#">Contact Info</a></small>
 					<small><a href="#">Terms and Policies</a></small>
 					<small><a href="#">Report Abuse</a></small>
 					<small><a href="#">FAQ</a></small>
-				</div>
 				
+
 				<h6>Copyright: Dean L. Stallworth III - March 2013</h6>
+				</div>
 			</footer>
 			<!-- JQUERY -->
 			 <script src="http://code.jquery.com/jquery.js"></script>
