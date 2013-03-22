@@ -1,4 +1,46 @@
 $(function(){
+
+var vids = $('#vidList')
+var link = $('#vidList h1')
+var title = $('#vidList li')
+
+$.get('https://gdata.youtube.com/feeds/api/videos?q=DIY&orderby=published&start-index=1&max-results=10&prettyprint=true&v=2', function(data) {
+$('.result').html(data);
+alert('Load was performed.');
+console.log(data);
+
+
+//  var xmlDoc = $.parseXML(data),
+//  $xml = $( xmlDoc ),
+// $link = $xml.find( "link" );
+// $title = $xml.find( "title" );
+// $vids = $xml.find( "href" );
+// console.log($link);
+
+// $(vids).append($vids);
+// $(link).append($link);
+// $(title).append($title);
+
+
+$(data).find("entry").each(function()
+{
+  $(vids).append($(this).find("Title").text() + "<br />");
+
+  $(this).find("author").each(function()
+  {
+    $(vids).append($(this).text() + "<br />");
+  });
+
+  $(data).append("<br />");
+});
+
+});
+
+// var xml = "https://gdata.youtube.com/feeds/api/videos?q=DIY&orderby=published&start-index=1&max-results=10&v=2",
+//  var xmlDoc = $.parseXML(data),
+//  $xml = $( xmlDoc ),
+// $title = $xml.find( "link" );
+// console.log('link');
 // 	$.ajax({
 //    cache:     'true',
 //    async:     'false',
@@ -19,13 +61,13 @@ $(function(){
 	// 	Host: 'accounts.google.com',
 	// 	ContentType: 'application/x-www-form-urlencoded',
 	// });
-	$.getJSON('http://www.reddit.com/r/diy.json', { get_param: 'value' }, function(data) {
-    $.each(data, function(index, element) {
-        $('body').append($('<div>', {
-            text: element.name
-        }));
-    });
-});
+// 	$.getJSON('http://www.reddit.com/r/diy.json', { get_param: 'value' }, function(data) {
+//     $.each(data, function(index, element) {
+//         $('body').append($('<div>', {
+//             text: element.name
+//         }));
+//     });
+// });
     // };
 // });
 });
