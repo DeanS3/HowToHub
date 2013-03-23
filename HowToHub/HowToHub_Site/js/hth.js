@@ -1,25 +1,12 @@
 $(function(){
 
 var vids = $('#vidList')
-var link = $('#vidList h1')
-var title = $('#vidList li')
+
 
 $.get('https://gdata.youtube.com/feeds/api/videos?q=DIY&orderby=published&start-index=1&max-results=10&prettyprint=true&v=2', function(data) {
 $('.result').html(data);
 alert('Load was performed.');
 console.log(data);
-
-
-//  var xmlDoc = $.parseXML(data),
-//  $xml = $( xmlDoc ),
-// $link = $xml.find( "link" );
-// $title = $xml.find( "title" );
-// $vids = $xml.find( "href" );
-// console.log($link);
-
-// $(vids).append($vids);
-// $(link).append($link);
-// $(title).append($title);
 
 
 $(data).find("entry").each(function()
@@ -37,6 +24,15 @@ $(data).find("entry").each(function()
 
 });
 
+$.get('https://accounts.google.com/o/oauth2/approval?as=-33b6894774fe2296&hl=en&pageId=none&xsrfsign=APsBz4gAAAAAUU0Q5Rq7KdxHveVFErSLrdhAmVz2R6pl', function(data){
+$('results').html(data).find('title')
+console.log($('results').html(data).find('title')
+)
+});
+
+$.post('https://accounts.google.com/o/oauth2/token', function(data) {
+$('.result').html(data);
+});
 // var xml = "https://gdata.youtube.com/feeds/api/videos?q=DIY&orderby=published&start-index=1&max-results=10&v=2",
 //  var xmlDoc = $.parseXML(data),
 //  $xml = $( xmlDoc ),
