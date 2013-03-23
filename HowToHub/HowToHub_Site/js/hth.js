@@ -26,10 +26,11 @@ $(data).find("entry").each(function()
 {
   $(vids).append($(this).find("Title").text() + "<br />");
 
-  $(this).find("author").each(function()
+  $(this).find("author name").each(function()
   {
     $(vids).append($(this).text() + "<br />");
   });
+
 
   $(data).append("<br />");
 });
