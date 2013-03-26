@@ -50,8 +50,10 @@
 					    // connected
 					  } else if (response.status === 'not_authorized') {
 					    // not_authorized
+					    login();
 					  } else {
 					    // not_logged_in
+					    login();
 					  }
 					});
 
