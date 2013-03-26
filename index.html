@@ -59,6 +59,7 @@
 				    FB.getLoginStatus(function(response) {
 					  if (response.status === 'connected') {
 					    // connected
+					    
 					  } else if (response.status === 'not_authorized') {
 					    // not_authorized
 					    login();
@@ -66,7 +67,7 @@
 					  } else {
 					    // not_logged_in
 					    login();
-					    $('enterBtn').addClass('disabled');
+					    
 					  }
 					});
 
@@ -86,10 +87,12 @@
 				     js.src = "//connect.facebook.net/en_US/all.js";
 				     ref.parentNode.insertBefore(js, ref);
 				   }(document));
+
 				</script>
 			<header>
 				<div class="row-fluid" class="hero-unit" id="headBg">
     				<h1 class="text-left"><!-- <img src="images/header.png" /> --><a href="#">How To Hub</a></h1>
+
    					 <p>Share your projects.  Find new challenges.  Build a network.</p>
    					 <p>
 				    <a href='learn.html'class="btn btn-primary btn-large">
@@ -98,7 +101,10 @@
 				    </p>
 				</div>
 			</header>
-			<button class="btn btn-large btn-block btn-primary" id='enterBtn' type="button">Enter - HOW TO HUB</button>
+			<button class="btn btn-large btn-block btn-primary disabled" id='enterBtn' type="button">Enter - HOW TO HUB</button>
+			<fb:name uid="loggedinuser" use-you="no"></fb:name>
+<fb:profile-pic uid="loggedinuser" size="square" facebook-logo="true"></fb:profile-pic>
+
 			<!-- <div class="pagination pagination-centered">
 				<ul class="thumbnails" class="text-right">
 					    <li class="span4">
@@ -129,7 +135,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/hth.js"></script>
+		<!-- <script src="js/hth.js"></script> -->
 		</body>
 	
 </html>

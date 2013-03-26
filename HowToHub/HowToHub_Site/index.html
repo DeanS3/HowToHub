@@ -36,6 +36,7 @@
 				  // Additional JS functions here
 				  window.fbAsyncInit = function() {
 				    FB.init({
+				    	
 				      appId      : '281340241998327', // App ID
 				      channelUrl : 'deans3.github.com/HowToHub/index.html', // Channel File
 				      status     : true, // check login status
@@ -47,19 +48,22 @@
 				    // Additional init code here
 				 	function login() {
 				    FB.login(function(response) {
+				    	console.log('working2')
 				        if (response.authResponse) {
 				            // connected
+				            
 				            testAPI();
 				        } else {
 				            // cancelled
 				            login();
 				        }
 				    });
-				}
+				};
 				    FB.getLoginStatus(function(response) {
+				    	 console.log('working3')
 					  if (response.status === 'connected') {
 					    // connected
-					    
+					   
 					  } else if (response.status === 'not_authorized') {
 					    // not_authorized
 					    login();
@@ -72,7 +76,7 @@
 					});
 
 				  };
-
+				  console.log('working4');
 				function testAPI() {
 				    console.log('Welcome!  Fetching your information.... ');
 				    FB.api('/me', function(response) {
@@ -81,6 +85,7 @@
 				}
 				  // Load the SDK Asynchronously
 				  (function(d){
+				  	console.log('working5')
 				     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 				     if (d.getElementById(id)) {return;}
 				     js = d.createElement('script'); js.id = id; js.async = true;
