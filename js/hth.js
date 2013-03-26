@@ -6,7 +6,7 @@ var vids = $('#vidList')
 $.get('https://gdata.youtube.com/feeds/api/videos?q=DIY&orderby=published&start-index=1&max-results=10&prettyprint=true&v=2', function(data) {
 $('.result').html(data);
 alert('Load was performed.');
-console.log(data);
+// console.log(data);
 
 
 $(data).find("entry").each(function()
