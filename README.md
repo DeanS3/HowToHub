@@ -1,3 +1,8 @@
+LAST UPADATED: MARCH 26, 2013
+
+I made the site available using github pages(http://deans3.github.com/HowToHub/index.html).
+It should ask you to log in using your facebook account through a modal popup on the home page.
+
 HowToHub
 ========
 
