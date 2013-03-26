@@ -26,6 +26,7 @@
 			#headBg img{background-size: 100%; height: 150px; width: 776px;}
 			.span4{background-color: white; }
 			footer{margin-left: 15px;}
+			#enterBtn{margin-left: 400px; width: 300px; margin-top: 50px; position: center;}
 		</style>
 	</head>
 		<body>
@@ -52,7 +53,6 @@
 				        } else {
 				            // cancelled
 				            login();
-				            $('#myModal').modal('static').show();
 				        }
 				    });
 				}
@@ -66,7 +66,7 @@
 					  } else {
 					    // not_logged_in
 					    login();
-
+					    $('enterBtn').addClass('disabled');
 					  }
 					});
 
@@ -98,6 +98,7 @@
 				    </p>
 				</div>
 			</header>
+			<button class="btn btn-large btn-block btn-primary" id='enterBtn' type="button">Enter - HOW TO HUB</button>
 			<!-- <div class="pagination pagination-centered">
 				<ul class="thumbnails" class="text-right">
 					    <li class="span4">
