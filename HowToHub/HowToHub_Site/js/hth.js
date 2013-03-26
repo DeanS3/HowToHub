@@ -53,8 +53,8 @@ $('.result').html(data);
 	// $.ajax({
 	// 	type: "POST",
 	// 	url: "https://accounts.google.com/o/oauth2/token/code=4/ux5gNj-_mIu4DOD_gNZdjX9EtOFf&
-	// 	+client_id=1048828436085.apps.googleusercontent.com&client_secret=L9ptxKkcDF72exFZTxYal_RR&
-	// 	+redirect_uri=urn:ietf:wg:oauth:2.0:oob&grant_type=authorization_code",
+	// 	client_id=1048828436085.apps.googleusercontent.com&client_secret=L9ptxKkcDF72exFZTxYal_RR&
+	// 	redirect_uri=urn:ietf:wg:oauth:2.0:oob&grant_type=authorization_code",
 	// 	Host: 'accounts.google.com',
 	// 	ContentType: 'application/x-www-form-urlencoded',
 	// });
