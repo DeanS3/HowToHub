@@ -29,6 +29,58 @@
 		</style>
 	</head>
 		<body>
+			<div id="fb-root"></div>
+				<script>
+				console.log('working');
+				  // Additional JS functions here
+				  window.fbAsyncInit = function() {
+				    FB.init({
+				      appId      : '281340241998327', // App ID
+				      channelUrl : 'deans3.github.com/HowToHub/index.html', // Channel File
+				      status     : true, // check login status
+				      cookie     : true, // enable cookies to allow the server to access the session
+				      xfbml      : true  // parse XFBML
+				      
+				    });
+
+				    // Additional init code here
+				    FB.init();
+				    FB.getLoginStatus(function(response) {
+					  if (response.status === 'connected') {
+					    // connected
+					  } else if (response.status === 'not_authorized') {
+					    // not_authorized
+					  } else {
+					    // not_logged_in
+					  }
+					});
+
+				  };
+				  function login() {
+				    FB.login(function(response) {
+				        if (response.authResponse) {
+				            // connected
+				            testAPI();
+				        } else {
+				            // cancelled
+				        }
+				    });
+				}
+				function testAPI() {
+				    console.log('Welcome!  Fetching your information.... ');
+				    FB.api('/me', function(response) {
+				        console.log('Good to see you, ' + response.name + '.');
+				    });
+				}
+				  // Load the SDK Asynchronously
+				  (function(d){
+				     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+				     if (d.getElementById(id)) {return;}
+				     js = d.createElement('script'); js.id = id; js.async = true;
+				     js.src = "//connect.facebook.net/en_US/all.js";
+				     ref.parentNode.insertBefore(js, ref);
+				   }(document));
+				</script>
 			<header>
 				<div class="row-fluid" class="hero-unit" id="headBg">
     				<h1 class="text-left"><!-- <img src="images/header.png" /> --><a href="#">How To Hub</a></h1>
@@ -40,7 +92,7 @@
 				    </p>
 				</div>
 			</header>
-			<div class="pagination pagination-centered">
+			<!-- <div class="pagination pagination-centered">
 				<ul class="thumbnails" class="text-right">
 					    <li class="span4">
 					    <div class="thumbnail">
@@ -55,7 +107,7 @@
 								</a>
 								</li>
 							</ul>
-					    </div>
+					    </div> -->
 
 					    </li>
 
@@ -70,7 +122,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/hth.js"></script>
+		<!-- <script src="js/hth.js"></script> -->
 		</body>
 	
 </html>
