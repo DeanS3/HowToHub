@@ -1,5 +1,9 @@
 $(function(){
 
+
+// $('enterBtn').addClass('disabled');
+
+
 var vids = $('#vidList')
 
 
