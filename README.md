@@ -1,7 +1,16 @@
-LAST UPADATED: MARCH 26, 2013
+LAST UPADATED: MARCH 27, 2013
 
 I made the site available using github pages(http://deans3.github.com/HowToHub/index.html).
-It should ask you to log in using your facebook account through a modal popup on the home page.
+It should ask you to log in using your facebook account through a modal popup on the home page.  Right now the enter
+site button is disabled, I am working on code that would check to see if a user is logged in and if they are
+it would enable the button.  The other pages are accessible through gh-pages by typing their name in place of
+index(user, form, etc).
+
+Right now there is no functionality on the user page outside of the updating list of HOW TO videos from youtube 
+in the side bar.  I am looking to add the ability to upload images and have people comment below them.
+
+By friday there should be options to send email to join up for mailing list and if I can figure it out then the 
+ability to like and share the uploaded images to facebook will be added too.
 
 HowToHub
 ========
