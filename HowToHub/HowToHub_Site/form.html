@@ -28,10 +28,35 @@
 			textarea{width: 976px;}
 			.form-actions{width: 976px; background-color: gold;}
 			form{margin-left: 10px; margin-right: 10px; }
+			footer h5{margin-left: 400px; margin-bottom: 50px;}
+			footer h6{margin-left: 390px; margin-top:50px; }
 
 		</style>
 	</head>
 		<body>
+			<div id="fb-root"></div>
+		      <script>
+		        window.fbAsyncInit = function() {
+		          FB.init({
+		            appId      : '281340241998327', // App ID
+		            channelUrl : 'deans3.github.com/HowToHub/index.html', // Channel File
+		            status     : true, // check login status
+		            cookie     : true, // enable cookies to allow the server to access the session
+		            xfbml      : true  // parse XFBML
+		          });
+		          FB.ui({ 
+		            method: 'feed' 
+		          });
+		        };
+		        // Load the SDK Asynchronously
+		        (function(d){
+		           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		           if (d.getElementById(id)) {return;}
+		           js = d.createElement('script'); js.id = id; js.async = true;
+		           js.src = "//connect.facebook.net/en_US/all.js";
+		           ref.parentNode.insertBefore(js, ref);
+		         }(document));
+		      </script>
 			<header>
 				<div class="page-header" class="row-fluid">
 			    	<h1 id="hthBg"><img src="images/header.png" alt="How To Hug Logo." title="Welcome to How To Hub!">
@@ -44,10 +69,11 @@
 			    <form>
 				    <fieldset>
 				    <legend>Describe Your Accomplishments</legend>
-				    <label>Name</label>
-				    <input type="text" placeholder="Your Name">
+				    <fb:name uid="loggedinuser" use-you="no"></fb:name>
+				    <label>Motto</label>
+				    <input type="text" placeholder="What motivates you?">
 				    <span class="help-block">List Your Projects.</span>
-				    <textarea rows="10" ></textarea>
+				    <textarea rows="10" placeholder="Add descriptions and urls." ></textarea>
 				        <div class="form-actions">
 						    <button type="submit" class="btn btn-primary">Save changes</button>
 						    <button type="button" class="btn">Cancel</button>
@@ -57,7 +83,7 @@
 			</div>   
 			
 			<footer>
-				<h5>Welcome To The HTH Community!</h5>
+				<h5>Share and connect with other DIYers!</h5>
 				<div class="row-fluid" id="foot">
 					<small><a href="#">Copyright Info</a></small>
 					<small><a href="#">Contact Info</a></small>
