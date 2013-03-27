@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style type="text/css">
+		/*Css Code*/
 			body{
 				clear: both;
 				background-size: 300px;
@@ -31,9 +32,9 @@
 		</style>
 	</head>
 		<body>
+			<!-- FACEBOOK FUNCTIONALITY CODE -->
 			<div id="fb-root"></div>
 				<script>
-				console.log('working');
 				  // Additional JS functions here
 				  window.fbAsyncInit = function() {
 				    FB.init({
@@ -49,7 +50,6 @@
 				    // Additional init code here
 				 	function login() {
 				    FB.login(function(response) {
-				    	console.log('working2')
 				        if (response.authResponse) {
 				            // connected
 				            
@@ -61,23 +61,21 @@
 				    });
 				};
 				    FB.getLoginStatus(function(response) {
-				    	 console.log('working3')
 					  if (response.status === 'connected') {
-					    // connected
+					    // connected - Means user is logged in and can access site
 					   
 					  } else if (response.status === 'not_authorized') {
 					    // not_authorized
-					    login();
+					    login();//Redirects user to login
 
 					  } else {
 					    // not_logged_in
-					    login();
+					    login();//Makes login box continue to pop up until logged in
 					    
 					  }
 					});
 
 				  };
-				  console.log('working4');
 				function testAPI() {
 				    console.log('Welcome!  Fetching your information.... ');
 				    FB.api('/me', function(response) {
@@ -107,25 +105,9 @@
 				    </p>
 				</div>
 			</header>
-			<button class="btn btn-large btn-block btn-primary disabled" id='enterBtn' type="button">Enter - HOW TO HUB</button>
-			
 
-			<!-- <div class="pagination pagination-centered">
-				<ul class="thumbnails" class="text-right">
-					    <li class="span4">
-					    <div class="thumbnail">
-						    <img data-src="images/youtube.png" alt="YouTube Logo" width="270" height="360">
-						    <h4>Authorized YouTube Log In</h4>
-						    <p>In order to use this app you must have a YouTube account and 
-						    	log in using their services.</p>
-						    <h5>Press Button Below To Continue.</h5>
-						    <ul class="nav nav-pills">
-								<li class="active">
-								<a href="https://accounts.google.com/o/oauth2/auth?client_id=1048828436085.apps.googleusercontent.com&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=https://gdata.youtube.com&response_type=code&access_type=offline">Log-In
-								</a>
-								</li>
-							</ul>
-					    </div> -->
+			<!-- Button is supposed to be disabled until user is logged in -->
+			<button class="btn btn-large btn-block btn-primary disabled" id='enterBtn' type="button">Enter - HOW TO HUB</button>
 
 					    </li>
 
@@ -134,10 +116,16 @@
 				
 			<footer class='bottom' class='row-fluid'>
 				<h5>Welcome To The HTH Community!</h5>
+
+				<!-- FACEBOOK Name and Picture Code -->
 				<fb:name uid="loggedinuser" use-you="no"></fb:name>
 				<fb:profile-pic uid="loggedinuser" size="square" facebook-logo="true"></fb:profile-pic>
+
 				<h6>Copyright: Dean L. Stallworth III - March 2013</h6>
 			</footer>
+
+			<!-- Wanted to do in-page javascript to make a quick function to check log in status
+			and change disabled class for enter site button -->
 			// <script type="text/javascript">
 			// 	// var name = '$("fb:name[uid~="loggedinuser"]")';
 			// 	// var button = '$("button")';

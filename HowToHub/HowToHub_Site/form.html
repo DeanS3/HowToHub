@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    	<!-- CSS CODE -->
 		<style type="text/css">
 			body{
 				 background-position: top; background-size: 300px;
@@ -30,10 +32,14 @@
 			form{margin-left: 10px; margin-right: 10px; }
 			footer h5{margin-left: 400px; margin-bottom: 50px;}
 			footer h6{margin-left: 390px; margin-top:50px; }
+			form .reset{margin-left: 120px; margin-top: 10px;}
 
 		</style>
 	</head>
 		<body>
+			<!-- FACEBOOK INTEGRATION -->
+			<!-- This code allowed users to comment to their feed from within the application
+			and allowed their name to display on the page. -->
 			<div id="fb-root"></div>
 		      <script>
 		        window.fbAsyncInit = function() {
@@ -65,11 +71,15 @@
 			    	</h1>
 			    </div>		 
 			</header>
+			<!-- FORM CODE -->
 			<div class="row-fluid"> 
 			    <form>
 				    <fieldset>
 				    <legend>Describe Your Accomplishments</legend>
+
+				    <!-- Logged in users name displayed by this code -->
 				    <fb:name uid="loggedinuser" use-you="no"></fb:name>
+
 				    <label>Motto</label>
 				    <input type="text" placeholder="What motivates you?">
 				    <span class="help-block">List Your Projects.</span>
@@ -77,6 +87,8 @@
 				        <div class="form-actions">
 						    <button type="submit" class="btn btn-primary">Save changes</button>
 						    <button type="button" class="btn">Cancel</button>
+						    <div class='reset'><INPUT type="RESET" value="Reset"></div>
+						   
 					    </div>
 				    </fieldset>
 			    </form>
@@ -84,6 +96,7 @@
 			
 			<footer>
 				<h5>Share and connect with other DIYers!</h5>
+				<!-- Bottom Navigation -->
 				<div class="row-fluid" id="foot">
 					<small><a href="#">Copyright Info</a></small>
 					<small><a href="#">Contact Info</a></small>
