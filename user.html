@@ -37,23 +37,23 @@
 	</head>
 		<body>
 			<script>
-$(function () {
-    $('#fileupload').fileupload({
-        dataType: 'json',
-        add: function (e, data) {
-            data.context = $('<button/>').text('Upload')
-                .appendTo(document.body)
-                .click(function () {
-                    data.context = $('<p/>').text('Uploading...').replaceAll($(this));
-                    data.submit();
-                });
-        },
-        done: function (e, data) {
-            data.context.text('Upload finished.');
-        }
-    });
-});
-</script>
+				$(function () {
+				    $('#fileupload').fileupload({
+				        dataType: 'json',
+				        add: function (e, data) {
+				            data.context = $('<button/>').text('Upload')
+				                .appendTo(document.body)
+				                .click(function () {
+				                    data.context = $('<p/>').text('Uploading...').replaceAll($(this));
+				                    data.submit();
+				                });
+				        },
+				        done: function (e, data) {
+				            data.context.text('Upload finished.');
+				        }
+				    });
+				});
+			</script>
 <script>
   window.fbAsyncInit = function() {
 		          FB.init({
@@ -114,6 +114,16 @@ $(function () {
 							<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
 							<button type="submit" class="btn btn-primary" id='fileupload'>UPLOAD</button>
 							<p></p>
+							<div id='comments'>
+								<h1>Project Praise</h1>
+								<fb:comments href="deans3.github.com/HowToHub/index.html"></fb:comments>
+
+								<script>
+								  FB.Event.subscribe('comments.add', function(resp) {
+								    Log.info('Comment was added', resp);
+								  });
+								</script>
+							</div><!-- Comments -->
 						</div><!-- User Div -->
 				    </div><!-- Span 10 Div -->
 				</div><!-- RowFluid Div -->
