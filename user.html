@@ -32,7 +32,7 @@
 			.page-header{margin-left: 25px;}
 			footer h5{margin-left: 330px; margin-bottom: 50px; margin-top: 50px;}
 			footer h6{margin-left: 390px; margin-top:50px; color: black;}
-			#fb{font-size: 25px;  margin:10px;}
+			#fb{font-size: 25px; margin: 10px;}
 		</style>
 	</head>
 		<body>
@@ -63,9 +63,9 @@ $(function () {
 		            cookie     : true, // enable cookies to allow the server to access the session
 		            xfbml      : true  // parse XFBML
 		          });
-		          FB.ui({ 
-		            method: 'friends.add', id: 5526183 }, Log.info.bind('friends.add callback'));
-		          });
+		          // FB.ui({ 
+		          //   method: 'feed' 
+		          // });
 		        };
 		        // Load the SDK Asynchronously
 		        (function(d){
@@ -96,8 +96,8 @@ $(function () {
 						<!-- <li></li>
 							<h1></h1>
 							<p></p> -->
-					</div>
-				    </div>
+					</div><!-- Span2 Div -->
+				    </div><!-- VidList Div -->
 				    <div class="span10">
 				    <!--Body content-->
 					    <div id="user">
@@ -114,10 +114,10 @@ $(function () {
 							<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
 							<button type="submit" class="btn btn-primary" id='fileupload'>UPLOAD</button>
 							<p></p>
-						</div>
-				    </div>
-				</div>
-		    </div>
+						</div><!-- User Div -->
+				    </div><!-- Span 10 Div -->
+				</div><!-- RowFluid Div -->
+		    </div><!-- Container Fluid Div -->
 
 			<footer>
 				<h5>Thank You For Joining and Sharing The HTH Community!</h5>
