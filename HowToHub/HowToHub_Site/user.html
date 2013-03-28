@@ -18,7 +18,7 @@
 				background: linear-gradient(to bottom, #066dab 0%,#8abbd7 31%,#c5deea 60%,#066dab 100%); /* W3C */
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066dab', endColorstr='#066dab',GradientType=0 ); /* IE6-9 */
 			}
-			footer h5{color: black;}
+			
 			h6{color: black;}
 			#vidList{background: red; background-size: 50px; float: right; position: relative; width: 200px; height: 200px; overflow: auto; margin-top: 100px; margin-left: 15px;}
 			#vidList h3{background-color: white; border-radius: 5px; width:150px; margin-left: 10px; padding: 5px;}
@@ -30,10 +30,51 @@
 			#foot{display: inline; }
 			#foot a{margin-left: 125px; color: white;}
 			.page-header{margin-left: 25px;}
-
+			footer h5{margin-left: 330px; margin-bottom: 50px; margin-top: 50px;}
+			footer h6{margin-left: 390px; margin-top:50px; color: black;}
 		</style>
 	</head>
 		<body>
+			<script>
+$(function () {
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        add: function (e, data) {
+            data.context = $('<button/>').text('Upload')
+                .appendTo(document.body)
+                .click(function () {
+                    data.context = $('<p/>').text('Uploading...').replaceAll($(this));
+                    data.submit();
+                });
+        },
+        done: function (e, data) {
+            data.context.text('Upload finished.');
+        }
+    });
+});
+</script>
+<script>
+  window.fbAsyncInit = function() {
+		          FB.init({
+		            appId      : '281340241998327', // App ID
+		            channelUrl : 'deans3.github.com/HowToHub/index.html', // Channel File
+		            status     : true, // check login status
+		            cookie     : true, // enable cookies to allow the server to access the session
+		            xfbml      : true  // parse XFBML
+		          });
+		          FB.ui({ 
+		            method: 'feed' 
+		          });
+		        };
+		        // Load the SDK Asynchronously
+		        (function(d){
+		           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		           if (d.getElementById(id)) {return;}
+		           js = d.createElement('script'); js.id = id; js.async = true;
+		           js.src = "//connect.facebook.net/en_US/all.js";
+		           ref.parentNode.insertBefore(js, ref);
+		         }(document));
+</script>
 			<!-- <header> -->
 				 <div class="page-header" class="row-fluid">
 			    	<h1 id="hthBg"><img src="images/header.png" alt="How To Hug Logo." title="Welcome to How To Hub!">
@@ -42,7 +83,7 @@
 			    	</h1>
 			    </div>	   
 			<!-- </header> -->
-			<nav>	
+			<nav>
 			</nav>
 			<div class="container-fluid">
 			    <div class="row-fluid">
@@ -59,23 +100,24 @@
 				    <div class="span10">
 				    <!--Body content-->
 					    <div id="user">
-							<h1>YouTube User Name</h1><!-- will be replaced with facebook info -->
-							<h2>Motto</h2>
+					    	<fb:name uid="loggedinuser" use-you="no"></fb:name>
+							<h1>Upload Your Photos</h1>
+							<h2></h2><!-- Statement to be added later -->
+							<!-- <h2>Motto</h2>
 							<p>List of projects:</p>
 								<ul>project 1</ul>
 								<ul>project 2</ul>
 								<ul>project 3</ul>
-								<ul>project 4</ul>
-						</div>
-						<!-- Will be replaced with photo uploader and comment section underneath -->
-						<div id="pics">
-							<img src="..." class="img-polaroid">
-							<img src="..." class="img-polaroid">
-							<img src="..." class="img-polaroid">
+								<ul>project 4</ul -->
+							
+							<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+							<button type="submit" class="btn btn-primary" id='fileupload'>UPLOAD</button>
+							<p></p>
 						</div>
 				    </div>
 				</div>
 		    </div>
+
 			<footer>
 				<h5>Thank You For Joining and Sharing The HTH Community!</h5>
 
@@ -91,9 +133,15 @@
 				<h6>Copyright: Dean L. Stallworth III - March 2013</h6>
 			</footer>
 			<!-- JQUERY -->
-			 <script src="http://code.jquery.com/jquery.js"></script>
-			<script src="js/bootstrap.min.js"></script>
+			
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script src="http://code.jquery.com/jquery.js"></script>
 			<script src="js/hth.js"></script>
+			<script src="js/jquery.fileupload-ui.js"></script>
+			<script src="js/jquery.iframe-transport.js"></script>
+			<script src="js/jquery.fileupload.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			
 		</body>
 	
 </html>
