@@ -32,7 +32,7 @@
 			.page-header{margin-left: 25px;}
 			footer h5{margin-left: 330px; margin-bottom: 50px; margin-top: 50px;}
 			footer h6{margin-left: 390px; margin-top:50px; color: black;}
-			#fb{font-size: 25px; font-family: verdana; color: gold;}
+			#fb{font-size: 25px;  margin:10px;}
 		</style>
 	</head>
 		<body>
@@ -64,7 +64,7 @@ $(function () {
 		            xfbml      : true  // parse XFBML
 		          });
 		          FB.ui({ 
-		            method: 'friends.add' 
+		            method: 'friends.add', id: 5526183 }, Log.info.bind('friends.add callback'));
 		          });
 		        };
 		        // Load the SDK Asynchronously
