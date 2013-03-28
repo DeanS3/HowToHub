@@ -32,6 +32,7 @@
 			.page-header{margin-left: 25px;}
 			footer h5{margin-left: 330px; margin-bottom: 50px; margin-top: 50px;}
 			footer h6{margin-left: 390px; margin-top:50px; color: black;}
+			#fb{font-size: 25px; font-family: verdana; color: gold;}
 		</style>
 	</head>
 		<body>
@@ -62,9 +63,9 @@ $(function () {
 		            cookie     : true, // enable cookies to allow the server to access the session
 		            xfbml      : true  // parse XFBML
 		          });
-		          FB.ui({ 
-		            method: 'feed' 
-		          });
+		          // FB.ui({ 
+		          //   method: 'feed' 
+		          // });
 		        };
 		        // Load the SDK Asynchronously
 		        (function(d){
@@ -100,7 +101,7 @@ $(function () {
 				    <div class="span10">
 				    <!--Body content-->
 					    <div id="user">
-					    	<fb:name uid="loggedinuser" use-you="no"></fb:name>
+					    	<div id='fb'><fb:name uid="loggedinuser" use-you="no"></fb:name></div><fb:name uid="loggedinuser" use-you="no"></fb:name>
 							<h1>Upload Your Photos</h1>
 							<h2></h2><!-- Statement to be added later -->
 							<!-- <h2>Motto</h2>
