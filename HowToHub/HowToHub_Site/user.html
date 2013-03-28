@@ -114,14 +114,16 @@
 							<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
 							<button type="submit" class="btn btn-primary" id='fileupload'>UPLOAD</button>
 							<p></p>
-							<h1>Project Praise</h1>
-								<fb:comments href="deans3.github.com/HowToHub/user.html"></fb:comments>
+							<div id='comments'>
+								<h1>Project Praise</h1>
+								<fb:comments href="deans3.github.com/HowToHub/index.html"></fb:comments>
 
 								<script>
 								  FB.Event.subscribe('comments.add', function(resp) {
 								    Log.info('Comment was added', resp);
 								  });
 								</script>
+							</div><!-- Comments -->
 						</div><!-- User Div -->
 				    </div><!-- Span 10 Div -->
 				</div><!-- RowFluid Div -->
