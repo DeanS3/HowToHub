@@ -8,7 +8,7 @@ var vids = $('#vidList')//Variable set up
 // Pulls info from Youtube and puts it in data object
 $.get('https://gdata.youtube.com/feeds/api/videos?q=DIY&orderby=published&start-index=1&max-results=10&prettyprint=true&v=2', function(data) {
 $('.result').html(data);
-alert('Load was performed.');
+
 
 // Parsing and displaying parsed information by appending it to the variable from above
 $(data).find("entry").each(function()
