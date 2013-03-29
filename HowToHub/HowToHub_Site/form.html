@@ -32,6 +32,9 @@
 			footer h5{margin-left: 400px; margin-bottom: 50px;}
 			footer h6{margin-left: 390px; margin-top:50px; color: black;}
 			form .reset{margin-left: 120px; margin-top: 10px;}
+			#form{margin-left: 150px;}
+			#form h1{margin-left: 125px;}
+			#exit{float: right; margin-bottom: 50px;}
 
 		</style>
 	</head>
@@ -68,30 +71,26 @@
 				    	</br>
 				    	<small>Project Showcase</small>
 			    	</h1>
-			    </div>		 
+			    </div>	<!-- Page Header	 --> 
 			</header>
-			<!-- FORM CODE -->
-			<div class="row-fluid"> 
-			    <form>
-				    <fieldset>
-				    <legend>Describe Your Accomplishments</legend>
-
-				    <!-- Logged in users name displayed by this code -->
+			<nav>
+				<div class="span3 offset1" id='exit'>
+				    	<a href="user.html" class="btn btn-large btn-primary" >Continue To Profile</a>
+				</div> <!-- Span3 -->
+			</nav>
+			<div class="row-fluid" id='form'> 
+			 <!-- Logged in users name displayed by this code -->
 				    <fb:name uid="loggedinuser" use-you="no"></fb:name>
+				    <h1>JOIN OUR MAILING LIST!</h1>
 
-				    <label>Motto</label>
-				    <input type="text" placeholder="What motivates you?">
-				    <span class="help-block">List Your Projects.</span>
-				    <textarea rows="10" placeholder="Add descriptions and urls." ></textarea>
-				        <div class="form-actions">
-						    <button type="submit" class="btn btn-primary">Save changes</button>
-						    <button type="button" class="btn">Cancel</button>
-						    <div class='reset'><INPUT type="RESET" value="Reset"></div>
-						   
-					    </div>
-				    </fieldset>
-			    </form>
-			</div>   
+			<!-- FORM CODE -->
+				<script type="text/javascript" src="https://formscentral.acrobat.com/Clients/Current/FormsCentral/htmlClient/scripts/adobe.form.embed.min.js"></script>
+				<script type="text/javascript">
+				var fZUtfU0fnCL_2dLtumzdVEZhg = new ADOBEFORMS.EmbedForm({formId:"ZUtfU0fnCL-LtumzdVEZhg", width:700, transparent:false});
+				fZUtfU0fnCL_2dLtumzdVEZhg.display();
+				</script>
+			    
+			</div>  <!-- Row Fluid --> 
 			
 			<footer>
 				<h5>Share and connect with other DIYers!</h5>
@@ -102,7 +101,7 @@
 					<small><a href="#">Terms and Policies</a></small>
 					<small><a href="#">Report Abuse</a></small>
 					<small><a href="#">FAQ</a></small>
-				</div>
+				</div> <!-- Row Fluid -->
 				
 				<h6>Copyright: Dean L. Stallworth III - March 2013</h6>
 			</footer>
