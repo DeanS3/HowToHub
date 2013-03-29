@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    	<!-- CSS CODE -->
 		<style type="text/css">
 			body{
 				 background-position: top; background-size: 300px;
@@ -18,7 +20,6 @@
 				background: linear-gradient(to bottom, #066dab 0%,#8abbd7 31%,#c5deea 60%,#066dab 100%); /* W3C */
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066dab', endColorstr='#066dab',GradientType=0 ); /* IE6-9 */
 			}
-			footer h5{color: black;}
 			h6{color: black;}
 			.page-header small{color: navy;}
 			.page-header{margin-left: 10px;}
@@ -29,11 +30,18 @@
 			.form-actions{width: 976px; background-color: gold;}
 			form{margin-left: 10px; margin-right: 10px; }
 			footer h5{margin-left: 400px; margin-bottom: 50px;}
-			footer h6{margin-left: 390px; margin-top:50px; }
+			footer h6{margin-left: 390px; margin-top:50px; color: black;}
+			form .reset{margin-left: 120px; margin-top: 10px;}
+			#form{margin-left: 150px;}
+			#form h1{margin-left: 125px;}
+			#exit{float: right; margin-bottom: 50px;}
 
 		</style>
 	</head>
 		<body>
+			<!-- FACEBOOK INTEGRATION -->
+			<!-- This code allowed users to comment to their feed from within the application
+			and allowed their name to display on the page. -->
 			<div id="fb-root"></div>
 		      <script>
 		        window.fbAsyncInit = function() {
@@ -63,34 +71,37 @@
 				    	</br>
 				    	<small>Project Showcase</small>
 			    	</h1>
-			    </div>		 
+			    </div>	<!-- Page Header	 --> 
 			</header>
-			<div class="row-fluid"> 
-			    <form>
-				    <fieldset>
-				    <legend>Describe Your Accomplishments</legend>
+			<nav>
+				<div class="span3 offset1" id='exit'>
+				    	<a href="user.html" class="btn btn-large btn-primary" >Continue To Profile</a>
+				</div> <!-- Span3 -->
+			</nav>
+			<div class="row-fluid" id='form'> 
+			 <!-- Logged in users name displayed by this code -->
 				    <fb:name uid="loggedinuser" use-you="no"></fb:name>
-				    <label>Motto</label>
-				    <input type="text" placeholder="What motivates you?">
-				    <span class="help-block">List Your Projects.</span>
-				    <textarea rows="10" placeholder="Add descriptions and urls." ></textarea>
-				        <div class="form-actions">
-						    <button type="submit" class="btn btn-primary">Save changes</button>
-						    <button type="button" class="btn">Cancel</button>
-					    </div>
-				    </fieldset>
-			    </form>
-			</div>   
+				    <h1>JOIN OUR MAILING LIST!</h1>
+
+			<!-- FORM CODE -->
+				<script type="text/javascript" src="https://formscentral.acrobat.com/Clients/Current/FormsCentral/htmlClient/scripts/adobe.form.embed.min.js"></script>
+				<script type="text/javascript">
+				var fZUtfU0fnCL_2dLtumzdVEZhg = new ADOBEFORMS.EmbedForm({formId:"ZUtfU0fnCL-LtumzdVEZhg", width:700, transparent:false});
+				fZUtfU0fnCL_2dLtumzdVEZhg.display();
+				</script>
+			    
+			</div>  <!-- Row Fluid --> 
 			
 			<footer>
 				<h5>Share and connect with other DIYers!</h5>
+				<!-- Bottom Navigation -->
 				<div class="row-fluid" id="foot">
-					<small><a href="#">Copyright Info</a></small>
-					<small><a href="#">Contact Info</a></small>
-					<small><a href="#">Terms and Policies</a></small>
-					<small><a href="#">Report Abuse</a></small>
-					<small><a href="#">FAQ</a></small>
-				</div>
+					<small><a href="test.html">Copyright Info</a></small>
+					<small><a href="test.html">Contact Info</a></small>
+					<small><a href="test.html">Terms and Policies</a></small>
+					<small><a href="test.html">Report Abuse</a></small>
+					<small><a href="test.html">FAQ</a></small>
+				</div> <!-- Row Fluid -->
 				
 				<h6>Copyright: Dean L. Stallworth III - March 2013</h6>
 			</footer>
